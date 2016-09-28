@@ -11,7 +11,7 @@ class Main extends React.Component {
 	render(){
 		const { props } = this;
 		return(
-			<div className="section__wrap app__wrap">
+			<div className="app__page">
 				<User mixClass="app__user" />
 			</div>
 		);

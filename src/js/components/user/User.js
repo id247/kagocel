@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { ForumOptions } from 'appSettings';
-
 import * as asyncActions from '../../actions/async';
 
 class User extends React.Component {
@@ -15,7 +13,7 @@ class User extends React.Component {
 	render(){
 		const { props } = this;
 
-		const avatar = props.profile.photoMedium ? props.profile.photoMedium : ForumOptions.anonAvatar
+		const avatar = props.profile.photoMedium;
 
 		return(
 			<div className={( (props.mixClass ? props.mixClass : '') + ' forum-user')}>
