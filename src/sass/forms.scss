@@ -38,6 +38,17 @@
 		}
 	}
 
+	&--red{
+		background: $red;
+		color: #fff;
+		&:hover{
+			background: lighten($red, 5%);
+		}
+		&:active{
+			background: darken($red, 5%);
+		}
+	}
+
 	&--m{
 		border-radius: 8px;
 		font-weight: 700;
@@ -50,6 +61,14 @@
 		font-weight: 700;
 		font-size: 15px;
 		padding: 10px 20px 10px;
+	}
+
+	&--xl{
+		border-radius: 5px;
+		font-weight: 700;
+		font-size: 40px;
+		padding: 20px 20px 20px;
+		font-family: $sansnarrow;
 	}
 
 	&--block{

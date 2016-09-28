@@ -19,31 +19,33 @@ class Login extends React.Component {
 		const { props } = this;
 
 		return (
-			<div className={( (props.mixClass ? props.mixClass : '') + ' login')}>
+			<div className="app__page login">
 
-				<h1 className="login__title">
-					Заголовок
-				</h1>
+				<div className="app__content">
 
-				<div className="login__text text">
+					<div className="login__logo-placeholder">
+
+						<span className="login__logo">Кагоцел</span>
+
+					</div>
+
+					<h1 className="login__title">
+						Занимательная анатомия<br/>
+						для всей семьи
+					</h1>
+
+					<div className="login__button-placeholder">
+
+						<Button 
+							size="xl"
+							color="red"
+							type="button"
+							onClickHandler={props.login}
+						>
+							ОТКРЫТЬ ПРИЛОЖЕНИЕ
+						</Button>
 					
-					<p>
-						Текст
-					</p>
-
-				</div>
-
-				<div className="login__button-placeholder">
-
-					<Button 
-						size="m"
-						color="blue-dark"
-						type="button"
-						onClickHandler={props.login}
-					>
-						Войти через Дневник.ру
-					</Button>
-				
+					</div>
 				</div>
 
 			</div>

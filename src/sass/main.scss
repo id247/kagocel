@@ -111,6 +111,21 @@
 
 .app{
 
+	&__page{
+		height: 100vh;
+		min-height: 700px;
+		background: $bg url(../images/bg/all.jpg) 50% 50% no-repeat;
+		background-size: cover;
+		
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__content{
+		position: relative;
+	}
+
 	&__loader{
 		position: fixed;
 		top: 0;
@@ -128,6 +143,59 @@
 		z-index: 550;
 	}
 
+}
+
+/* ==========================================================================
+ * login
+ * ========================================================================== */
+
+.login{
+	background-image: url(../images/bg/main.jpg);
+	text-align: center;
+	position: relative;
+
+	&:before,
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+	}
+
+	&:before{
+		background: url(../images/main-boy.png) 50% 50% no-repeat;
+		//background-size: cover;
+		width: image-width('../assets/images/main-boy.png');
+		margin: 0 0 0 280px;
+	}
+
+	&:after{
+		background: url(../images/main-girl.png) 50% 50% no-repeat;
+		//background-size: cover;
+		width: image-width('../assets/images/main-girl.png');
+		margin: 0 0 0 -600px;
+	}
+
+	&__logo-placeholder{
+		margin: 0 0 60px;
+	}
+
+	&__logo{
+		text-indent: -9999px;
+		display: inline-block;
+		@include sprite($logo-big);
+	}
+
+	&__title{
+		font-size: 48px;
+		line-height: (64/48);
+		text-transform: uppercase;
+		color: $red;
+		font-weight: 700;
+		margin: 0 0 60px;
+		font-family: $sansnarrow;
+	}
 }
 
 /* ==========================================================================
@@ -162,8 +230,8 @@
 		height: 40px;
 		display: inline-block;
 		animation: spin .6s infinite linear;
-		text-indent: -9999px;
-		content: '';
+		//text-indent: -9999px;
+		//content: '';
 	}
 
 	&--visible{
