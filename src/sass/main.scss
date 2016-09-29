@@ -224,6 +224,13 @@
 		}
 	}
 
+	&--adults{
+		&:before{
+			@include sprite($doc-adult);
+			left: -30px;
+		}
+	}
+
 	&__bubble{
 		margin: 0 0 0 260px;
 		padding: 50px 45px;
@@ -237,6 +244,42 @@
 		font-size: 20px;
 		line-height: (32/20);
 		margin: 0 0 35px;
+	}
+}
+
+/* ==========================================================================
+ * start-age
+ * ========================================================================== */
+
+.start-age{
+
+	&__title{
+		font-size: 14px;
+		margin: 0 0 12px;
+	}
+
+	&__item{
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 10px 0 0;
+		font-size: 24px;
+	}
+
+	&__input{
+		height: 53px;
+		line-height: 53px;
+		border-radius: 5px;
+		border: 1px solid #d7d7d7;
+		width: 70px;
+		text-align: center;
+		-webkit-appearance: none;
+		font-size: 24px;
+		font-family: $sans;
+		padding: 0 10px;
+	}
+
+	&__error{
+		padding: 15px 0 0;
 	}
 }
 
@@ -262,6 +305,18 @@
 	&--kids{
 		&:after{
 			@include sprite($doc-boy);	
+		}
+	}
+
+	&--adults{
+		&:after{
+			@include sprite($doc-adult);	
+			left: -70px;
+			margin-top: -160px;
+		}
+
+		.anatomy__list{
+			padding: 0 200px;
 		}
 	}
 
@@ -328,6 +383,14 @@
 
 	&--5:before{
 		@include sprite($anatomy-5);
+	}
+
+	&--6:before{
+		@include sprite($anatomy-6);
+	}
+
+	&--7:before{
+		@include sprite($anatomy-7);
 	}
 
 	&__href{
@@ -399,6 +462,46 @@
 
 		&--11{
 			top: 280px;
+			right: -110px;
+		}
+
+		&--2-2{
+			top: 180px;
+			left: -60px;
+		}
+
+		&--2-3{
+			top: 220px;
+			left: -70px;
+		}
+
+		&--2-4{
+			top: 160px;
+			right: -50px;
+		}
+
+		&--2-5{
+			top: 200px;
+			right: -60px;
+		}
+
+		&--2-6{
+			top: 155px;
+			left: -70px;
+		}
+
+		&--2-7{
+			top: 145px;
+			right: -180px;
+		}
+
+		&--2-8{
+			top: 175px;
+			right: -200px;
+		}
+
+		&--2-9{
+			top: 245px;
 			right: -110px;
 		}
 	}
