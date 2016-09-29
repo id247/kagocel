@@ -1,34 +1,45 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import User from '../../components/user/User';
-
 //import * as asyncActions from '../../actions/async';
-//import * as pageActions from '../../actions/page';
+import * as pageActions from '../../actions/page';
 
-class Main extends React.Component {
+class Parents extends React.Component {
+
+	componentWillMount(){
+		const { props } = this;
+
+		if (props.profile 
+			&& props.profile.roles.indexOf('System') === -1
+			&& props.profile.roles.indexOf('EduParent') === -1
+		){
+			props.redirect('/kids');
+		}
+
+	}
 
 	render(){
 		const { props } = this;
-		return(
-			<div className="app__page">
-				<User mixClass="app__user" />
-			</div>
-		);
+
+		if (!props.profile){
+			return null;
+		}
+
+		return props.children;
 	}
 }
 
 
 
 const mapStateToProps = (state, ownProps) => ({
-	//profile: state.user.profile,
+	profile: state.user.profile,
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-	//logout: () => dispatch(asyncActions.logout()), 
+	redirect: (page) => dispatch(pageActions.setPageWithoutHistory(page)),
 });
 
-Main.propTypes = {
+Parents.propTypes = {
 	mixClass: React.PropTypes.string,
 //	Array: React.PropTypes.array.isRequired,
 //	Bool: React.PropTypes.bool.isRequired,
@@ -39,4 +50,4 @@ Main.propTypes = {
 //	Symbol: React.PropTypes.symbol.isRequired,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Parents);
