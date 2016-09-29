@@ -14,7 +14,8 @@
 	transition: all .3s;
 	line-height: 1;
 
-	font-family: $mainFontFamily;
+	font-family: $sansnarrow;
+	text-transform: uppercase;
 
 	cursor: pointer;
 
@@ -50,17 +51,17 @@
 	}
 
 	&--m{
-		border-radius: 8px;
+		border-radius: 5px;
 		font-weight: 700;
 		font-size: 12px;
 		padding: 8px 20px 8px;
 	}
 
 	&--l{
-		border-radius: 8px;
+		border-radius: 5px;
 		font-weight: 700;
-		font-size: 15px;
-		padding: 10px 20px 10px;
+		font-size: 27px;
+		padding: 13px 40px 13px;
 	}
 
 	&--xl{
@@ -68,7 +69,6 @@
 		font-weight: 700;
 		font-size: 40px;
 		padding: 20px 20px 20px;
-		font-family: $sansnarrow;
 	}
 
 	&--block{

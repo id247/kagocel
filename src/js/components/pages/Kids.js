@@ -22,7 +22,7 @@ class Kids extends React.Component {
 
 	render(){
 		const { props } = this;
-	
+		
 		return props.children;
 	}
 }

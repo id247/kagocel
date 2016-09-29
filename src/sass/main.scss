@@ -16,8 +16,8 @@
 			display: none;
 		}
 
-		width: 1350px;
-		margin: auto;
+		//width: 1350px;
+		//margin: auto;
 		
 	}
 
@@ -111,6 +111,30 @@
 
 .app{
 
+	&__logo-placeholder{
+		position: absolute;
+		top: 15px;
+		left: 15px;
+	}
+
+	&__logo{
+		display: inline-block;
+		text-indent: -9999px;
+		@include sprite($logo);
+	}
+
+	&__awards-placeholder{
+		position: absolute;
+		top: 25px;
+		right: 15px;
+	}
+
+	&__awards{
+		display: inline-block;
+		text-indent: -9999px;
+		@include sprite($awards);
+	}
+
 	&__page{
 		height: 100vh;
 		min-height: 700px;
@@ -120,10 +144,14 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
 	}
 
-	&__content{
+	&__wrap{
+		max-width: 1350px;
+		margin: auto;
 		position: relative;
+		@include clearfix;
 	}
 
 	&__loader{
@@ -141,6 +169,252 @@
 		right: 0;
 		bottom: 0;
 		z-index: 550;
+	}
+
+}
+
+/* ==========================================================================
+ * bubble
+ * ========================================================================== */
+
+.bubble{
+	background: #fff;
+	border: 1px solid #d8ac74;
+	padding: 35px 35px;
+	border-radius: 7px;
+	position: relative;
+
+	&:before{
+		content: '';
+		@include sprite($bubble);
+		position: absolute;
+		top: 120px;
+		right: 100%;
+	}
+
+	&__close{
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		text-indent: -9999px;
+		background-color: transparent;
+		@include sprite($close);
+	}
+}
+
+/* ==========================================================================
+ * start
+ * ========================================================================== */
+
+.start{
+	position: relative;
+	max-width: 1100px;
+	margin: auto;
+
+	&:before{
+		content: '';
+		position: absolute;
+		top: 100px;
+		left: 0;
+	}
+
+	&--kids{
+		&:before{
+			@include sprite($doc-boy);
+		}
+	}
+
+	&__bubble{
+		margin: 0 0 0 260px;
+		padding: 50px 45px;
+		&:before{
+			top: 175px;
+		}
+	}
+
+	&__text{
+
+		font-size: 20px;
+		line-height: (32/20);
+		margin: 0 0 35px;
+	}
+}
+
+/* ==========================================================================
+ * anatomy
+ * ========================================================================== */
+
+.anatomy{
+	max-width: 1315px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+	padding: 25px 65px 75px;
+	position: relative;
+
+	&:after{
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: -20px;
+		margin: -185px 0 0;
+	}
+
+	&--kids{
+		&:after{
+			@include sprite($doc-boy);	
+		}
+	}
+
+	&__list{
+		margin: 0 0 -50px;
+		padding: 0 30px 0 15px;
+		text-align: center;
+	}
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 36px 50px;
+	}
+
+	&__bubble{
+		position: absolute;
+		bottom: 4px;
+		left: 215px;
+		max-width: 800px;
+
+		opacity: 0;
+		visibility: hidden; 
+
+		transition: all .4s;
+
+		&--visible{
+			opacity: 1;
+			visibility: visible; 
+		}
+
+		&:before{
+			top: auto;
+			bottom: 20px;
+		}
+	}
+}
+
+.anatomy-item{
+
+	position: relative;
+	padding: 60px 0 0;
+
+	&:before{
+		content: '';
+		display: block;
+	}
+
+	&--1:before{
+		@include sprite($anatomy-1);
+	}
+
+	&--2:before{
+		@include sprite($anatomy-2);
+	}
+
+	&--3:before{
+		@include sprite($anatomy-3);
+	}
+
+	&--4:before{
+		@include sprite($anatomy-4);
+	}
+
+	&--5:before{
+		@include sprite($anatomy-5);
+	}
+
+	&__href{
+		position: absolute;
+		color: #157feb;
+		font-size: 18px;
+		font-weight: 600;
+		text-align: center;
+
+		transition: all .2s;
+
+		&:hover,
+		&--active{
+			color: $red;
+		}
+
+		&--1{
+			top: 150px;
+			left: -95px;
+		}
+
+		&--2{
+			top: 240px;
+			left: -65px;
+		}
+
+		&--3{
+			top: 15px;
+			left: 0px;
+			right: 0px;
+		}
+
+		&--4{
+			top: 0px;
+			left: 0px;
+			right: 0px;
+		}
+
+		&--5{
+			top: 150px;
+			left: -30px;
+		}
+
+		&--6{
+			top: 150px;
+			right: -30px;
+		}
+
+		&--7{
+			top: 15px;
+			left: 0px;
+			right: 0px;
+		}
+
+		&--8{
+			top: 220px;
+			left: -60px;
+		}
+
+		&--9{
+			top: 380px;
+			left: -80px;
+		}
+
+		&--10{
+			top: 220px;
+			right: -80px;
+		}
+
+		&--11{
+			top: 280px;
+			right: -110px;
+		}
+	}
+
+}
+
+.anatomy-bubble{
+	
+	&__title{
+		font-size: 18px;
+		margin: 0 0 15px;
+		font-weight: 700;
+	}
+
+	&__text{
+		font-size: 14px;
 	}
 
 }

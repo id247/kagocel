@@ -21,7 +21,7 @@ class Login extends React.Component {
 		return (
 			<div className="app__page login">
 
-				<div className="app__content">
+				<div className="app__wrap">
 
 					<div className="login__logo-placeholder">
 
@@ -46,6 +46,7 @@ class Login extends React.Component {
 						</Button>
 					
 					</div>
+				
 				</div>
 
 			</div>

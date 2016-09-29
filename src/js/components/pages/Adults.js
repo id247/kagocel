@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 //import * as asyncActions from '../../actions/async';
 import * as pageActions from '../../actions/page';
 
-class Parents extends React.Component {
+class Adults extends React.Component {
 
 	componentWillMount(){
 		const { props } = this;
@@ -39,7 +39,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 	redirect: (page) => dispatch(pageActions.setPageWithoutHistory(page)),
 });
 
-Parents.propTypes = {
+Adults.propTypes = {
 	mixClass: React.PropTypes.string,
 //	Array: React.PropTypes.array.isRequired,
 //	Bool: React.PropTypes.bool.isRequired,
@@ -50,4 +50,4 @@ Parents.propTypes = {
 //	Symbol: React.PropTypes.symbol.isRequired,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Parents);
+export default connect(mapStateToProps, mapDispatchToProps)(Adults);

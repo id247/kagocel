@@ -17,7 +17,31 @@ class App extends React.Component {
 			return null;
 		}
 
-		return props.children;
+		return(
+
+			<div className="app__page">
+
+				<div className="app__logo-placeholder">
+
+					<span className="app__logo">Кагоцел</span>
+
+				</div>
+
+				<div className="app__awards-placeholder">
+
+					<span className="app__awards"></span>
+
+				</div>
+
+				<div className="app__wrap">
+
+					{props.children}
+			
+				</div>
+			
+			</div>
+
+		);
 	}
 }
 

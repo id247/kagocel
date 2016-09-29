@@ -7,15 +7,24 @@ import ErrorMessage from '../components/error/ErrorMessage';
 import Login 		from '../components/pages/Login';
 import App 			from '../components/App';
 import Index 		from '../components/pages/Index';
+
 import Kids 		from '../components/pages/Kids';
+import KidsIndex	from '../components/pages/kids/KidsIndex';
+import KidsAnatomy	from '../components/pages/kids/KidsAnatomy';
+
 import Adults 		from '../components/pages/Adults';
+
 import Admins 		from '../components/pages/Admins';
 
 const routes = (
 	<Router history={hashHistory}>
 		<Route path="/" component={App}>
 			<IndexRoute component={Index} />
-			<Route path="kids" component={Kids} />
+			<Route path="kids" component={Kids}>
+				<IndexRoute component={KidsIndex} />
+				<Route path="anatomy" component={KidsAnatomy} />
+			</Route>
+			
 			<Route path="adults" component={Adults} />
 			<Route path="admins" component={Admins} />
 		</Route>

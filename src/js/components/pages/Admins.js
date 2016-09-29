@@ -21,7 +21,7 @@ class Admins extends React.Component {
 		const { props } = this;
 
 		return (
-			<div className="app__page">
+			<div className="admins">
 
 				<Button 
 					size="m"
