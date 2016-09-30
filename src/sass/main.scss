@@ -13,7 +13,7 @@
 	&__app{
 
 		@media (orientation: portrait) {
-			display: none;
+			//display: none;
 		}
 
 		//width: 1350px;
@@ -31,17 +31,6 @@
 		margin: auto;
 	}
 
-	&__disc{
-		position: absolute;
-		left: 5px;
-		right: 5px;
-		bottom: 5px;
-		text-align: center;
-		color: #cdc6ae;
-		text-transform: uppercase;
-		font-size: 22px;
-		font-family: 'Arial Narrow';
-	}
 }
 
 /* ==========================================================================
@@ -58,7 +47,7 @@
 	justify-content: center;
 
 	@media (orientation: portrait) {
-		display: flex;
+		//display: flex;
 	}
 
 	&__content{
@@ -111,10 +100,21 @@
 
 .app{
 
+	&__header{
+		padding: 15px;
+		margin: 0 auto 10px;
+		max-width: 1350px;
+		width: 100%;
+		@include clearfix;
+	}
+
 	&__logo-placeholder{
-		position: absolute;
-		top: 15px;
-		left: 15px;
+		float: left;
+		@media (max-width: $middleWidth){
+			float: none;
+			margin: 0 0 25px;
+			text-align: center;
+		}
 	}
 
 	&__logo{
@@ -123,27 +123,29 @@
 		@include sprite($logo);
 	}
 
-	&__awards-placeholder{
-		position: absolute;
-		top: 25px;
-		right: 15px;
-	}
-
 	&__awards{
-		display: inline-block;
-		text-indent: -9999px;
-		@include sprite($awards);
+		float: right;
+		@media (max-width: $middleWidth){
+			float: none;
+			margin: 0 0 15px;
+		}
 	}
 
 	&__page{
-		height: 100vh;
-		min-height: 700px;
+		min-height: 100vh;
+		width: 100%;
+		//min-height: 700px;
 		background: $bg url(../images/bg/all.jpg) 50% 50% no-repeat;
 		background-size: cover;
 		
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		flex-flow: column;
+
+		@media (max-width: $maxWidth){
+			//padding: 120px 10px;
+		}
 
 	}
 
@@ -152,6 +154,11 @@
 		margin: auto;
 		position: relative;
 		@include clearfix;
+		padding: 0 10px;
+
+		@media (max-width: $middleWidth){
+			width: 100%;
+		}
 	}
 
 	&__loader{
@@ -171,6 +178,77 @@
 		z-index: 550;
 	}
 
+
+	&__disc{
+		//position: absolute;
+		//left: 5px;
+		//right: 5px;
+		//bottom: 5px;
+		//
+		
+		position: relative;
+		z-index: 500;
+		
+		padding: 15px 5px 5px;
+		text-align: center;
+		color: #cdc6ae;
+		text-transform: uppercase;
+		font-size: 22px;
+		font-family: 'Arial Narrow';
+		@media (max-width: $middleWidth){
+			position: static;
+			padding-top: 10px;
+			z-index: auto;
+		}
+	}
+
+}
+
+/* ==========================================================================
+ * admins
+ * ========================================================================== */
+
+.admins{
+	text-align: center;
+}
+
+/* ==========================================================================
+ * awards
+ * ========================================================================== */
+
+.awards{
+	
+
+	&__list{
+		margin: 0 0 -30px;
+		text-align: center;
+	}
+
+	&__item{
+		display: inline-block;
+		margin: 0 0 30px 30px;
+		&:first-child{
+			margin-left: 0;
+		}
+
+		&--1{
+			@include sprite($awards-1);
+		}
+
+		&--2{
+			@include sprite($awards-2);
+		}
+
+		&--3{
+			@include sprite($awards-3);
+		}
+
+		@media (max-width: $middleWidth){
+			margin: 0 15px 30px;
+			vertical-align: top;
+		}
+
+	}
 }
 
 /* ==========================================================================
@@ -183,6 +261,11 @@
 	padding: 35px 35px;
 	border-radius: 7px;
 	position: relative;
+	box-shadow: 0 0 30px rgba(0,0,0,.3);
+	
+	@media (max-width: $middleWidth){
+		padding: 15px 15px;
+	}
 
 	&:before{
 		content: '';
@@ -190,6 +273,9 @@
 		position: absolute;
 		top: 120px;
 		right: 100%;
+		@media (max-width: $middleWidth){
+			display: none;
+		}
 	}
 
 	&__close{
@@ -216,11 +302,21 @@
 		position: absolute;
 		top: 100px;
 		left: 0;
+		
+		@media (max-width: $middleWidth){
+			position: static;
+			display: block;
+			margin: 0 auto;
+		}
+
 	}
 
 	&--kids{
 		&:before{
 			@include sprite($doc-boy);
+			@media (max-width: $middleWidth){
+				height: 250px;
+			}
 		}
 	}
 
@@ -228,14 +324,22 @@
 		&:before{
 			@include sprite($doc-adult);
 			left: -30px;
+			@media (max-width: $middleWidth){
+				height: 250px;
+			}
 		}
 	}
 
 	&__bubble{
-		margin: 0 0 0 260px;
+		margin: 0 10px 0 260px;
 		padding: 50px 45px;
 		&:before{
 			top: 175px;
+		}
+		
+		@media (max-width: $middleWidth){
+			margin: 0 10px 0 10px;
+			padding: 20px 15px;
 		}
 	}
 
@@ -252,6 +356,7 @@
  * ========================================================================== */
 
 .start-age{
+	margin: 0 0 -10px;
 
 	&__title{
 		font-size: 14px;
@@ -261,7 +366,7 @@
 	&__item{
 		display: inline-block;
 		vertical-align: middle;
-		margin: 0 10px 0 0;
+		margin: 0 10px 10px 0;
 		font-size: 24px;
 	}
 
@@ -288,11 +393,15 @@
  * ========================================================================== */
 
 .anatomy{
-	max-width: 1315px;
+	//max-width: 1315px;
 	background: #fff;
 	box-shadow: 0 0 10px rgba(0,0,0,.2);
-	padding: 25px 65px 75px;
+	padding: 25px 10px 75px;
 	position: relative;
+	@media (max-width: $maxWidth){
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 
 	&:after{
 		content: '';
@@ -300,6 +409,9 @@
 		top: 100%;
 		left: -20px;
 		margin: -185px 0 0;
+		@media (max-width: $maxWidth){
+			display: none;
+		}
 	}
 
 	&--kids{
@@ -317,19 +429,37 @@
 
 		.anatomy__list{
 			padding: 0 200px;
+			@media (max-width: $middleWidth){
+				padding: 0;
+			}
 		}
 	}
 
 	&__list{
 		margin: 0 0 -50px;
-		padding: 0 30px 0 15px;
+		padding: 0 60px 0 45px;
 		text-align: center;
+		@media (max-width: $middleWidth){
+			padding: 0;
+		}
 	}
 
 	&__item{
 		display: inline-block;
 		vertical-align: top;
 		margin: 0 36px 50px;
+
+		@media (max-width: $maxWidth){
+			margin-left: 80px;
+			margin-right: 80px;
+		}
+
+		@media (max-width: $middleWidth){
+			display: block;
+			margin-left: 0;
+			margin-right: 0;	
+		}
+
 	}
 
 	&__bubble{
@@ -351,46 +481,88 @@
 		&:before{
 			top: auto;
 			bottom: 20px;
+
+			@media (max-width: $maxWidth){
+				display: none;
+			}
+		}
+
+		@media (max-width: $maxWidth){
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			width: 90%;
+			bottom: auto;
+			transform: translateY(-20%) translateX(-50%);
+
+			&:after{
+				content: '';
+				
+				position: absolute;
+				bottom: 100%;
+				left: 0;
+				right: 0;
+				margin: 0 auto 1px;
+			}
+
+			&--adults{
+				&:after{
+					@include sprite($doc-adult);
+					height: 200px;
+				}
+			}
+
+			&--kids{
+				&:after{
+					@include sprite($doc-boy);
+					height: 200px;
+				}
+			}
 		}
 	}
 }
 
 .anatomy-item{
 
-	position: relative;
-	padding: 60px 0 0;
+	
+	&__image{
 
-	&:before{
-		content: '';
-		display: block;
-	}
+		position: relative;
+		padding: 60px 0 0;
+		width: 165px;
+		margin: 0 auto 0;
+		&:before{
+			content: '';
+			display: block;
+			margin: 0 auto;
+		}
+		&--1:before{
+			@include sprite($anatomy-1);
+		}
 
-	&--1:before{
-		@include sprite($anatomy-1);
-	}
+		&--2:before{
+			@include sprite($anatomy-2);
+		}
 
-	&--2:before{
-		@include sprite($anatomy-2);
-	}
+		&--3:before{
+			@include sprite($anatomy-3);
+		}
 
-	&--3:before{
-		@include sprite($anatomy-3);
-	}
+		&--4:before{
+			@include sprite($anatomy-4);
+		}
 
-	&--4:before{
-		@include sprite($anatomy-4);
-	}
+		&--5:before{
+			@include sprite($anatomy-5);
+		}
 
-	&--5:before{
-		@include sprite($anatomy-5);
-	}
+		&--6:before{
+			@include sprite($anatomy-6);
+		}
 
-	&--6:before{
-		@include sprite($anatomy-6);
-	}
-
-	&--7:before{
-		@include sprite($anatomy-7);
+		&--7:before{
+			@include sprite($anatomy-7);
+		}		
 	}
 
 	&__href{
@@ -504,6 +676,12 @@
 			top: 245px;
 			right: -110px;
 		}
+
+		@media (max-width: 480px){
+			position: static;
+			display: block;
+			margin: 20px 0 0px;
+		}
 	}
 
 }
@@ -518,6 +696,10 @@
 
 	&__text{
 		font-size: 14px;
+
+		@media (max-width: 480px){
+			font-size: 12px;
+		}
 	}
 
 }
@@ -531,6 +713,12 @@
 	text-align: center;
 	position: relative;
 
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-flow: column;
+
+
 	&:before,
 	&:after{
 		content: '';
@@ -538,6 +726,10 @@
 		top: 0;
 		bottom: 0;
 		left: 50%;
+
+		@media (max-width: $maxWidth){
+			display: none;
+		}
 	}
 
 	&:before{
@@ -553,6 +745,8 @@
 		width: image-width('../assets/images/main-girl.png');
 		margin: 0 0 0 -600px;
 	}
+
+
 
 	&__logo-placeholder{
 		margin: 0 0 60px;
@@ -572,6 +766,22 @@
 		font-weight: 700;
 		margin: 0 0 60px;
 		font-family: $sansnarrow;
+
+		@media (max-width: 480px){
+			font-size: 35px;
+		}
+	}
+
+	&__button-placeholder{
+		margin: 0 0 30px;
+	}
+
+	&__awards{
+		display: none;
+
+		@media (max-width: $maxWidth){
+			display: block;
+		}
 	}
 }
 

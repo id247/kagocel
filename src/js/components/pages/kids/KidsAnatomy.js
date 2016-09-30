@@ -61,7 +61,7 @@ class KidsAnatomy extends React.Component {
 
 		this.state = {
 			bubbleVisible: false,
-			textId: 1,
+			textId: false,
 		}
 	}
 
@@ -85,6 +85,7 @@ class KidsAnatomy extends React.Component {
 			...this.state,
 			...{
 				bubbleVisible: false,
+				textId: false,
 			}
 		})
 	}
@@ -110,121 +111,139 @@ class KidsAnatomy extends React.Component {
 
 				<ul className="anatomy__list">
 
-					<li className="anatomy__item anatomy-item anatomy-item--1">
+					<li className="anatomy__item anatomy-item">
 
-						<a 
-							href="#" 
-							className="anatomy-item__href anatomy-item__href--1"
-							onClick={this._openBubbleHandler(1)}
-						>
-							Позвоночник
-						</a>
+						<div className="anatomy-item__image anatomy-item__image--1">
+
+							<a 
+								href="#" 
+								className={'anatomy-item__href ' + ( state.textId === 1 ? 'anatomy-item__href--active' : '' ) + ' anatomy-item__href--1'}
+								onClick={this._openBubbleHandler(1)}
+							>
+								Позвоночник
+							</a>
 
 
-						<a 
-							href="#" 
-							className="anatomy-item__href anatomy-item__href--2"
-							onClick={this._openBubbleHandler(2)}
-						>
-							Кости
-						</a>
+							<a 
+								href="#" 
+								className={'anatomy-item__href ' + ( state.textId === 2 ? 'anatomy-item__href--active' : '' ) + ' anatomy-item__href--2'}
+								onClick={this._openBubbleHandler(2)}
+							>
+								Кости
+							</a>
+							
+						</div>
 
-						
 					</li>
 
-					<li className="anatomy__item anatomy-item anatomy-item--2">
+					<li className="anatomy__item anatomy-item">
 
-						<a 
-							href="#" 
-							className="anatomy-item__href anatomy-item__href--3"
-							onClick={this._openBubbleHandler(3)}
-						>
-							Мышцы
-						</a>
+						<div className="anatomy-item__image anatomy-item__image--2">
 
-						
-					</li>
-
-
-					<li className="anatomy__item anatomy-item anatomy-item--3">
-
-						<a 
-							href="#" 
-							className="anatomy-item__href anatomy-item__href--4"
-							onClick={this._openBubbleHandler(4)}
-						>
-							Кровеносные<br/>
-							сосуды
-						</a>
-
-
-						<a 
-							href="#" 
-							className="anatomy-item__href anatomy-item__href--5"
-							onClick={this._openBubbleHandler(5)}
-						>
-							Легкие
-						</a>
-
-
-						<a 
-							href="#" 
-							className="anatomy-item__href anatomy-item__href--6"
-							onClick={this._openBubbleHandler(6)}
-						>
-							Сердце
-						</a>
+							<a 
+								href="#" 
+								className={'anatomy-item__href ' + ( state.textId === 3 ? 'anatomy-item__href--active' : '' ) + ' anatomy-item__href--3'}
+								onClick={this._openBubbleHandler(3)}
+							>
+								Мышцы
+							</a>
+							
+						</div>
 
 						
 					</li>
 
 
-					<li className="anatomy__item anatomy-item anatomy-item--4">
+					<li className="anatomy__item anatomy-item">
 
-						<a 
-							href="#" 
-							className="anatomy-item__href anatomy-item__href--7"
-							onClick={this._openBubbleHandler(7)}
-						>
-							Мозг
-						</a>
+						<div className="anatomy-item__image anatomy-item__image--3">
+
+							<a 
+								href="#" 
+								className={'anatomy-item__href ' + ( state.textId === 4 ? 'anatomy-item__href--active' : '' ) + ' anatomy-item__href--4'}
+								onClick={this._openBubbleHandler(4)}
+							>
+								Кровеносные<br/>
+								сосуды
+							</a>
+
+
+							<a 
+								href="#" 
+								className={'anatomy-item__href ' + ( state.textId === 5 ? 'anatomy-item__href--active' : '' ) + ' anatomy-item__href--5'}
+								onClick={this._openBubbleHandler(5)}
+							>
+								Легкие
+							</a>
+
+
+							<a 
+								href="#" 
+								className={'anatomy-item__href ' + ( state.textId === 6 ? 'anatomy-item__href--active' : '' ) + ' anatomy-item__href--6'}
+								onClick={this._openBubbleHandler(6)}
+							>
+								Сердце
+							</a>
+							
+						</div>
 
 						
 					</li>
 
 
-					<li className="anatomy__item anatomy-item anatomy-item--5">
+					<li className="anatomy__item anatomy-item">
 
-						<a 
-							href="#" 
-							className="anatomy-item__href anatomy-item__href--8"
-							onClick={this._openBubbleHandler(8)}
-						>
-							Печень
-						</a>
+						<div className="anatomy-item__image anatomy-item__image--4">
 
-						<a 
-							href="#" 
-							className="anatomy-item__href anatomy-item__href--10"
-							onClick={this._openBubbleHandler(10)}
-						>
-							Желудок
-						</a>
+							<a 
+								href="#" 
+								className={'anatomy-item__href ' + ( state.textId === 7 ? 'anatomy-item__href--active' : '' ) + ' anatomy-item__href--7'}
+								onClick={this._openBubbleHandler(7)}
+							>
+								Мозг
+							</a>
+							
+						</div>
 
-						<a 
-							href="#" 
-							className="anatomy-item__href anatomy-item__href--11"
-							onClick={this._openBubbleHandler(11)}
-						>
-							Кишечник
-						</a>
+						
+					</li>
 
+
+					<li className="anatomy__item anatomy-item">
+						
+						<div className="anatomy-item__image anatomy-item__image--5">
+
+							<a 
+								href="#" 
+								className={'anatomy-item__href ' + ( state.textId === 9 ? 'anatomy-item__href--active' : '' ) + ' anatomy-item__href--8'}
+								onClick={this._openBubbleHandler(8)}
+							>
+								Печень
+							</a>
+
+							<a 
+								href="#" 
+								className={'anatomy-item__href ' + ( state.textId === 10 ? 'anatomy-item__href--active' : '' ) + ' anatomy-item__href--10'}
+								onClick={this._openBubbleHandler(10)}
+							>
+								Желудок
+							</a>
+
+							<a 
+								href="#" 
+								className={'anatomy-item__href ' + ( state.textId === 11 ? 'anatomy-item__href--active' : '' ) + ' anatomy-item__href--11'}
+								onClick={this._openBubbleHandler(11)}
+							>
+								Кишечник
+							</a>
+
+						</div>
 						
 					</li>
 
 				</ul>
 
-				<div className={'anatomy__bubble ' + (state.bubbleVisible ? 'anatomy__bubble--visible' : '') + ' anatomy-bubble bubble'}>
+				<div className={'anatomy__bubble anatomy__bubble--kids ' + (state.bubbleVisible ? 'anatomy__bubble--visible' : '') + ' anatomy-bubble bubble'}>
 
 					<button 
 						className="bubble__close button"
@@ -232,12 +251,12 @@ class KidsAnatomy extends React.Component {
 					>x</button>
 
 					<h3 className="anatomy-bubble__title">
-						{bubbleTexts['text-' + state.textId ].title}
+						{state.textId && bubbleTexts['text-' + state.textId ].title}
 					</h3>
 
 					<div className="anatomy-bubble__text text">
 						<p>
-							{bubbleTexts['text-' + state.textId ].text}
+							{state.textId && bubbleTexts['text-' + state.textId ].text}
 						</p>
 					</div>
 
