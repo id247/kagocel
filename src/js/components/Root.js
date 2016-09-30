@@ -4,9 +4,12 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 import Loading 			from '../components/loading/Loading';
 import ErrorMessage 	from '../components/error/ErrorMessage';
-import Login 			from '../components/pages/Login';
+
 import App 				from '../components/App';
-import Index 			from '../components/pages/Index';
+import Test 			from '../components/Test';
+
+import Login 			from '../components/pages/Login';
+import AppIndex 		from '../components/pages/Index';
 
 import Kids 			from '../components/pages/Kids';
 import KidsIndex		from '../components/pages/kids/KidsIndex';
@@ -18,25 +21,44 @@ import AdultsAnatomy	from '../components/pages/adults/AdultsAnatomy';
 
 import Admins 			from '../components/pages/Admins';
 
-const routes = (
-	<Router history={hashHistory}>
-		<Route path="/" component={App}>
-			<IndexRoute component={Index} />
-			<Route path="kids" component={Kids}>
-				<IndexRoute component={KidsIndex} />
-				<Route path="anatomy" component={KidsAnatomy} />
-			</Route>
-			
-			<Route path="adults" component={Adults}>
-				<IndexRoute component={AdultsIndex} />
-				<Route path="anatomy" component={AdultsAnatomy} />
-			</Route>
 
-			<Route path="admins" component={Admins} />
-		</Route>
-		<Route path="/login" component={Login} />
-	</Router>
-);
+import TestIndex 		from '../components/pages-test/TestIndex';
+import Quiz 			from '../components/pages-test/Quiz';
+
+let routes;
+
+if (location.href.indexOf('kagocel-app') > -1 ){
+
+	routes = (
+		<Router history={hashHistory}>
+			<Route path="/" component={App}>
+				<IndexRoute component={AppIndex} />
+				<Route path="kids" component={Kids}>
+					<IndexRoute component={KidsIndex} />
+					<Route path="anatomy" component={KidsAnatomy} />
+				</Route>
+				
+				<Route path="adults" component={Adults}>
+					<IndexRoute component={AdultsIndex} />
+					<Route path="anatomy" component={AdultsAnatomy} />
+				</Route>
+
+				<Route path="admins" component={Admins} />
+			</Route>
+			<Route path="/login" component={Login} />
+		</Router>
+	);
+
+}else{
+	routes = (
+		<Router history={hashHistory}>
+			<Route path="/" component={Test}>
+				<IndexRoute component={TestIndex} />
+				<Route path="quiz" component={Quiz} />
+			</Route>
+		</Router>
+	);
+}
 
 class Root extends React.Component {
 

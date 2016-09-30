@@ -9,6 +9,7 @@
 	min-height: 100vh;
 	background: $bg url(../images/bg/main.jpg) 50% 50% no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 
 	&__app{
 
@@ -137,11 +138,16 @@
 		//min-height: 700px;
 		background: $bg url(../images/bg/all.jpg) 50% 50% no-repeat;
 		background-size: cover;
+		background-attachment: fixed;
 		
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-flow: column;
+
+		&--test{
+			background-image: url(../images/bg/main.jpg);
+		}
 
 		@media (max-width: $maxWidth){
 			//padding: 120px 10px;
@@ -437,7 +443,7 @@
 
 	&__list{
 		margin: 0 0 -50px;
-		padding: 0 60px 0 45px;
+		padding: 0 70px 0 55px;
 		text-align: center;
 		@media (max-width: $middleWidth){
 			padding: 0;
@@ -581,7 +587,7 @@
 
 		&--1{
 			top: 150px;
-			left: -95px;
+			left: -85px;
 		}
 
 		&--2{
@@ -618,7 +624,7 @@
 		}
 
 		&--8{
-			top: 220px;
+			top: 235px;
 			left: -60px;
 		}
 
@@ -629,12 +635,12 @@
 
 		&--10{
 			top: 220px;
-			right: -80px;
+			right: -70px;
 		}
 
 		&--11{
 			top: 280px;
-			right: -110px;
+			right: -100px;
 		}
 
 		&--2-2{
@@ -782,6 +788,217 @@
 		@media (max-width: $maxWidth){
 			display: block;
 		}
+	}
+}
+
+
+/* ==========================================================================
+ * test
+ * ========================================================================== */
+
+.test{
+
+	padding: 0 0 80px;
+
+	&__content{
+		position: relative;
+		background: #fff;
+		border: 1px solid #d8ac74;
+		border-radius: 5px;
+		padding: 95px 140px 70px 160px;
+		text-align: center;
+		width: 820px;
+		margin: 0 auto;
+
+		@media (max-width: $middleWidth){
+			width: 100%;
+			padding: 50px 50px;
+		}
+
+		@media (max-width: 480px){
+			padding: 25px 10px;
+		}
+
+		&:before,
+		&:after{
+			content: '';
+			position: absolute;
+			top: 0px;
+			left: 50%;
+
+			@media (max-width: $middleWidth){
+				display: none;
+			}
+		}
+
+		&:before{
+			background: url(../images/test-boy.png) 50% 50% no-repeat;
+			//background-size: cover;
+			width: image-width('../assets/images/test-boy.png');
+			height: image-height('../assets/images/test-boy.png');
+			margin: 100px 0 0 -670px;
+		}
+
+		&:after{
+			background: url(../images/test-girl.png) 50% 50% no-repeat;
+			//background-size: cover;
+			width: image-width('../assets/images/test-girl.png');
+			height: image-height('../assets/images/test-girl.png');
+			margin: 150px 0 0 355px;
+		}
+
+	}
+
+	&__title{
+		font-size: 40px;
+		font-family: $sansnarrow;
+		margin: 0 0 30px;
+		text-transform: uppercase;
+		color: $red;
+		font-weight: 700;
+	}
+
+	&__text{
+		margin: 0 0 90px;
+		font-size: 20px;		
+	}
+}
+
+
+/* ==========================================================================
+ * quiz
+ * ========================================================================== */
+
+.quiz{
+//	padding: 0 110px 0 130px;
+	color: #686868;
+
+
+
+	@media (max-width: $middleWidth){
+//		width: 100%;
+//		padding: 30px 20px;
+	}
+
+	&__questions{
+		
+	}
+
+	&__item{
+		display: none;
+
+		&--visible{
+			display: block;
+		}
+	}
+}
+
+.quiz-item{
+	text-align: left;
+
+	&__title{
+		//max-width: 460px;
+		font-size: 24px;
+		line-height: (32/24);
+		font-family: $sansnarrow;
+		font-weight: 600;
+		margin: 0 auto 30px;
+		text-transform: uppercase;
+		color: $red;
+	}
+
+	&__answers{
+		margin: 0 0 30px;
+	}
+
+	&__answer{
+		margin: 0 0 25px;
+
+		&:list-child{
+			margin-bottom: 0;
+		}
+
+	}
+
+	&__answer-button{
+		background: none;
+		border: 0;
+		font-size: 32px;
+		//font-family: $futuris;
+		color: #686868;
+		cursor: pointer;
+		outline: none;
+
+
+		&:hover{
+			text-shadow: 0 0 30px #fff;
+		}
+	}
+
+	&__button-placeholder{
+		padding: 20px 0 0;
+	}
+}
+
+.quiz-results{
+	text-align: left;
+
+	&__title{
+		font-size: 24px;
+		line-height: (32/24);
+		font-family: $sansnarrow;
+		font-weight: 600;
+		margin: 0 auto 30px;
+		text-transform: uppercase;
+		color: $red;
+	}
+
+	&__text{
+		font-size: 18px;
+		margin: 0 0 40px;
+	}
+
+	&__item{
+		margin: 0 0 10px;
+	}
+
+	&__buttton-placeholder{
+		
+	}
+}
+
+.quiz-radio{
+	display: inline-block;
+	position: relative;
+	cursor: pointer; 
+
+	&__input{
+		position: absolute;
+		left: -9999px;
+
+		&:checked + .quiz-radio__text:before{
+			background: $red;
+		}
+	}
+
+	&__text{
+		&:before{
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 30px;
+			height: 30px;
+			border: 6px solid #fff;
+			border-radius: 50%;
+			box-shadow: 0 0 0 1px rgba(0,0,0,.2);
+
+			position: absolute;
+			top: -5px;
+			left: 0;
+		}
+		font-size: 18px;
+		display: block;
+		padding: 0 0 0 40px;
 	}
 }
 
