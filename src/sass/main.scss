@@ -805,9 +805,10 @@
 		background: #fff;
 		border: 1px solid #d8ac74;
 		border-radius: 5px;
-		padding: 95px 140px 70px 160px;
+		padding: 75px 100px 50px 100px;
 		text-align: center;
 		width: 820px;
+		min-height: 500px;
 		margin: 0 auto;
 
 		@media (max-width: $middleWidth){
@@ -870,14 +871,11 @@
  * ========================================================================== */
 
 .quiz{
-//	padding: 0 110px 0 130px;
+	padding: 0 0 0 40px;
 	color: #686868;
 
-
-
 	@media (max-width: $middleWidth){
-//		width: 100%;
-//		padding: 30px 20px;
+		padding-left: 0;
 	}
 
 	&__questions{
@@ -956,6 +954,10 @@
 	&__text{
 		font-size: 18px;
 		margin: 0 0 40px;
+
+		strong{
+			color: $red;
+		}
 	}
 
 	&__item{
