@@ -729,39 +729,52 @@
 	&:after{
 		content: '';
 		position: absolute;
-		top: 0;
-		bottom: 0;
+		top: 10px;
+		bottom: 10px;
 		left: 50%;
 
 		@media (max-width: $maxWidth){
 			display: none;
 		}
+
+		@media (max-height: 740px){
+		//	transform: scale(.7);
+		}
 	}
 
 	&:before{
 		background: url(../images/main-boy.png) 50% 50% no-repeat;
-		//background-size: cover;
+		background-size: auto 100%;
 		width: image-width('../assets/images/main-boy.png');
-		margin: 0 0 0 280px;
+		max-height: image-height('../assets/images/main-boy.png');
+		margin: auto 0 auto 280px;
 	}
 
 	&:after{
 		background: url(../images/main-girl.png) 50% 50% no-repeat;
-		//background-size: cover;
+		background-size: auto 100%;
 		width: image-width('../assets/images/main-girl.png');
-		margin: 0 0 0 -600px;
+		max-height: image-height('../assets/images/main-girl.png');
+		margin: auto 0 auto -600px;
 	}
 
 
 
 	&__logo-placeholder{
 		margin: 0 0 60px;
+		@media (max-width: $middleWidth){
+			margin-bottom: 20px;
+		}
 	}
 
 	&__logo{
 		text-indent: -9999px;
 		display: inline-block;
 		@include sprite($logo-big);
+
+		@media (max-width: $middleWidth){
+			@include sprite($logo-small);
+		}
 	}
 
 	&__title{
@@ -770,8 +783,13 @@
 		text-transform: uppercase;
 		color: $red;
 		font-weight: 700;
-		margin: 0 0 60px;
+		margin: 0 0 80px;
 		font-family: $sansnarrow;
+		
+		@media (max-width: $middleWidth){
+			margin-bottom: 20px;
+			font-size: 35px;
+		}
 
 		@media (max-width: 480px){
 			font-size: 35px;
@@ -779,7 +797,11 @@
 	}
 
 	&__button-placeholder{
-		margin: 0 0 30px;
+		margin: 0 0 100px;
+		
+		@media (max-width: $middleWidth){
+			margin-bottom: 20px;
+		}
 	}
 
 	&__awards{

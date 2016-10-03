@@ -74,7 +74,7 @@ class AdultsIndex extends React.Component {
 					<div className="start__age start-age">
 
 						<div className="start-age__title">
-							{state.ageError ? 'Укажите корректный возраст в диапазоне от 1 до 18 лет:' : 'Укажите, сколько ребенку полных лет:'}
+							{state.ageError ? 'Укажите корректный возраст в диапазоне от 1 до 18 лет:' : 'Укажите, сколько полных лет вашему ребенку:'}
 						</div>
 
 						<div className="start-age__item">
