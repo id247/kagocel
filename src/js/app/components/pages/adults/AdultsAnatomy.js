@@ -321,21 +321,25 @@ class AdultsAnatomy extends React.Component {
 
 				</ul>
 
-				<div className={'anatomy__bubble anatomy__bubble--adults ' + (state.bubbleVisible ? 'anatomy__bubble--visible' : '') + ' anatomy-bubble bubble'}>
+				<div className={'anatomy__bubble anatomy__bubble--adults ' + (state.bubbleVisible ? 'anatomy__bubble--visible' : '') + ' anatomy-bubble'}>
 
-					<button 
-						className="bubble__close button"
-						onClick={this._closeBubbleHandler()}
-					>x</button>
+					<div className="anatomy__bubble-inner anatomy__bubble-inner--adults bubble">
 
-					<h3 className="anatomy-bubble__title">
-						{state.textId && bubbleTexts[state.ageId]['text-' + state.textId ].title}
-					</h3>
+						<button 
+							className="bubble__close button"
+							onClick={this._closeBubbleHandler()}
+						>x</button>
 
-					<div className="anatomy-bubble__text text">
-						<p>
-							{state.textId && bubbleTexts[state.ageId]['text-' + state.textId ].text}
-						</p>
+						<h3 className="anatomy-bubble__title">
+							{state.textId && bubbleTexts[state.ageId]['text-' + state.textId ].title}
+						</h3>
+
+						<div className="anatomy-bubble__text text">
+							<p>
+								{state.textId && bubbleTexts[state.ageId]['text-' + state.textId ].text}
+							</p>
+						</div>
+
 					</div>
 
 				</div>
