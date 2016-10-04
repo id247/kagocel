@@ -125,12 +125,12 @@ const config = {
 		cache: true,
 		entry: {
 			[appName]: [
-				'babel-polyfill', 
+				//'babel-polyfill', 
 				'whatwg-fetch',
 				'./src/js/app',
 			],
 			[commentsName]: [
-				'babel-polyfill', 
+				//'babel-polyfill', 
 				'whatwg-fetch',
 				'./src/js/comments',
 			],
@@ -161,12 +161,12 @@ const config = {
 		cache: true,
 		entry: {
 			[appName]: [
-				'babel-polyfill', 
+				//'babel-polyfill', 
 				'whatwg-fetch',
 				'./src/js/app',
 			],
 			[commentsName]: [
-				'babel-polyfill', 
+				//'babel-polyfill', 
 				'whatwg-fetch',
 				'./src/js/comments',
 			],
