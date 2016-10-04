@@ -16,3 +16,10 @@ export const PromoOptions = {
 	server: 'https://dnevnik.ru',
 }
 
+export const CommentsOptions = {	
+	pageSize: 15,
+	adminId: [
+		'1000005031742'
+	],
+	anonAvatar: 'https://static.dnevnik.ru/images/avatars/user/a.m.jpg',
+}

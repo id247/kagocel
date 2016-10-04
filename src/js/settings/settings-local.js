@@ -15,6 +15,13 @@ export const PromoOptions = {
 	url: 'http://localhost:9000',
 	server: 'https://staging.dnevnik.ru',
 	cdn: 'http://localhost:9000/assets/',
+}
 
+export const CommentsOptions = {	
+	pageSize: 5,
+	adminId: [
+		'1000005031742'
+	],
+	anonAvatar: 'https://static.dnevnik.ru/images/avatars/user/a.m.jpg',
 }
 

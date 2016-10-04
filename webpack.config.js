@@ -79,16 +79,25 @@ const plugins = {
 	}),
 };
 
+const appName = 'app-' + server;
+const commentsName = 'comments-' + server;
+
 const config = {
 
 	development: {
 		cache: true,
 		entry: {
-			[server]: [
+			[appName]: [
 				'whatwg-fetch',
 				'webpack-dev-server/client?http://localhost:3000',
 				'webpack/hot/only-dev-server',
-				'./src/js',
+				'./src/js/app',
+			],
+			[commentsName]: [
+				'whatwg-fetch',
+				'webpack-dev-server/client?http://localhost:3000',
+				'webpack/hot/only-dev-server',
+				'./src/js/comments',
 			],
 		},
 		devtool: '#inline-source-map',
@@ -115,10 +124,15 @@ const config = {
 	staging: {
 		cache: true,
 		entry: {
-			[server]: [
+			[appName]: [
 				'babel-polyfill', 
 				'whatwg-fetch',
-				'./src/js/index',
+				'./src/js/app',
+			],
+			[commentsName]: [
+				'babel-polyfill', 
+				'whatwg-fetch',
+				'./src/js/comments',
 			],
 		},
 		//devtool: '#inline-source-map',
@@ -146,10 +160,15 @@ const config = {
 	production: {
 		cache: true,
 		entry: {
-			[server]: [
+			[appName]: [
 				'babel-polyfill', 
 				'whatwg-fetch',
-				'./src/js/index',
+				'./src/js/app',
+			],
+			[commentsName]: [
+				'babel-polyfill', 
+				'whatwg-fetch',
+				'./src/js/comments',
 			],
 		},
 		output: {
