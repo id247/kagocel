@@ -1,4 +1,4 @@
-import { XmlEntities } from 'html-entities';
+import XmlEntities from 'html-entities/lib/xml-entities.js';
 const entities = new XmlEntities();
 
 export function HTMLencode(str){
