@@ -33,21 +33,45 @@ class App extends React.Component {
 
 						<ul className="awards__list">
 
-							<li className="awards__item awards__item--1">
+							<li className="awards__item">
 
-
-
-							</li>
-
-							<li className="awards__item awards__item--2">
-
-
+								<span className="award-specialists award-specialists--inline">
+									Выбор специалистов
+								</span>
 
 							</li>
 
-							<li className="awards__item awards__item--3">
+							<li className="awards__item">
 
+								<div className="award award--laureat">
 
+									<div className="award__title">
+										RUSSIAN PHARMA AWARDS
+									</div>
+
+									<div className="award__text">
+										в&nbsp;номинации «Самый назначаемый
+										препарат при&nbsp;профилактике
+										и&nbsp;лечении ОРВИ и&nbsp;гриппа»**
+									</div>
+
+								</div>
+
+							</li>
+
+							<li className="awards__item">
+
+								<div className="award award--best">
+
+									<div className="award__title">
+										ЛУЧШИЙ БЕЗРЕЦЕПТУРНЫЙ&nbsp;ПРЕПАРАТ
+									</div>
+
+									<div className="award__text">
+										по версии премии Зеленый Крест 2015
+									</div>
+
+								</div>
 
 							</li>
 
