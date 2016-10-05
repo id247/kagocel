@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { PromoOptions } from 'appSettings';
+
 //import * as asyncActions from '../actions/async';
 
 class Test extends React.Component {
@@ -19,7 +21,7 @@ class Test extends React.Component {
 
 					<div className="app__logo-placeholder">
 
-						<span className="app__logo">Кагоцел</span>
+						<a href={PromoOptions.url} className="app__logo">Кагоцел</a>
 
 					</div>
 
@@ -87,7 +89,7 @@ class Test extends React.Component {
 
 						<div className="test__sides">
 
-							<div className="test__side test__side--1 side">
+							<div className="test__side test__side--1 side side--test">
 
 								<div className="side__item side__item--1-3">
 
@@ -102,7 +104,7 @@ class Test extends React.Component {
 
 							</div>
 
-							<div className="test__side test__side--2 side">
+							<div className="test__side test__side--2 side side--test">
 
 								<div className="side__item side__item--2-4">
 

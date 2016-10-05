@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { PromoOptions } from 'appSettings';
+
 import * as asyncActions from '../actions/async';
 
 class App extends React.Component {
@@ -25,7 +27,7 @@ class App extends React.Component {
 
 					<div className="app__logo-placeholder">
 
-						<span className="app__logo">Кагоцел</span>
+						<a href={PromoOptions.url} className="app__logo">Кагоцел</a>
 
 					</div>
 

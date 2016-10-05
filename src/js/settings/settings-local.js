@@ -12,7 +12,7 @@ export const APIoptions = {
 }
 
 export const PromoOptions = {	
-	url: 'http://localhost:9000',
+	url: 'http://localhost:9000/kagocel.html',
 	server: 'https://staging.dnevnik.ru',
 	cdn: 'http://localhost:9000/assets/',
 }
