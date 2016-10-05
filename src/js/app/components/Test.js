@@ -61,6 +61,37 @@ class Test extends React.Component {
 
 						</div>
 
+						<div className="test__sides">
+
+							<div className="test__side test__side--1 side">
+
+								<div className="side__item side__item--1-3">
+
+									<span className="girl">
+
+										<div className="girl__girl"></div>
+										<div className="girl__bag"></div>
+
+									</span>
+
+								</div>
+
+							</div>
+
+							<div className="test__side test__side--2 side">
+
+								<div className="side__item side__item--2-4">
+
+									<span className="boy">
+
+									</span>
+
+								</div>
+
+							</div>
+
+						</div>
+
 					</div>
 
 				</div>
