@@ -12,8 +12,10 @@ export const APIoptions = {
 }
 
 export const PromoOptions = {	
-	url: 'https://ad.dnenvik.ru/promo/kagocel-app',
+	url: 'https://ad.dnevnik.ru/promo/kagocel-2016',
 	server: 'https://dnevnik.ru',
+	cdn: 'https://ad.csdnevnik.ru/special/staging/kagocel-2016/',
+	doctorName: 'Цельс',
 }
 
 export const CommentsOptions = {	

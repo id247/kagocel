@@ -14,7 +14,8 @@ export const APIoptions = {
 export const PromoOptions = {	
 	url: 'http://localhost:9000',
 	server: 'https://staging.dnevnik.ru',
-	cdn: 'http://localhost:9000/assets/',
+	cdn: 'https://ad.csdnevnik.ru/special/staging/kagocel-2016/',
+	doctorName: 'Цельс',
 
 }
 

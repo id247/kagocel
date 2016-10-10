@@ -45,6 +45,12 @@
 		position: relative;
 	}
 
+	&__sides{
+		@media (max-width: $maxWidth){
+    		display: none;
+		}
+	}
+
 	&__wrap{
 		@include clearfix;
 		position: relative;
@@ -561,6 +567,9 @@
 		font-size: 20px;
 		text-transform: uppercase;
 		font-weight: 700;
+		@media (max-width: 1600px){
+			font-size: 17px;
+		}
 	}
 
 	&__text{
@@ -899,7 +908,8 @@
 
 	&--kids{
 		&:before{
-			@include sprite($doc-boy);
+			@include sprite($doc-adult);
+			left: -30px;
 			@media (max-width: $middleWidth){
 				height: 250px;
 			}
@@ -1002,7 +1012,9 @@
 
 	&--kids{
 		&:after{
-			@include sprite($doc-boy);	
+			@include sprite($doc-adult);	
+			left: -70px;
+			margin-top: -160px;	
 		}
 	}
 
@@ -1072,11 +1084,12 @@
 
 			padding: 10px;
 
+			transition: none;
+
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			flex-flow: column;
-	
+			flex-flow: column;	
 
 		}
 
@@ -1093,7 +1106,7 @@
 
 		@media (max-width: $maxWidth){
 			//position: absolute;
-			margin: 250px auto auto;
+			margin: 250px auto;
 
 			&:before{
 				display: none;
@@ -1118,7 +1131,7 @@
 
 			&--kids{
 				&:after{
-					@include sprite($doc-boy);
+					@include sprite($doc-adult);
 					height: 200px;
 				}
 			}
@@ -1436,7 +1449,7 @@
 		
 		&--2{
 			right: 50%;
-			margin: 10px 260px 0 0;
+			margin: 10px 280px 0 0;
 			text-align: right;
 		}	
 		

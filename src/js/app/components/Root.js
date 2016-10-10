@@ -27,7 +27,7 @@ import Quiz 			from '../components/pages-test/Quiz';
 
 let routes;
 
-if (location.href.indexOf('kagocel-app') > -1 ){
+if (location.href.indexOf('kagocel-2016-app') > -1 ){
 
 	routes = (
 		<Router history={hashHistory}>

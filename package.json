@@ -2,7 +2,7 @@
   "name": "kagocel",
   "version": "1.0.0",
   "description": "",
-  "cdn": "https://ad.csdnevnik.ru/special/staging/kagocel-app/",
+  "cdn": "https://ad.csdnevnik.ru/special/staging/kagocel-2016/",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {

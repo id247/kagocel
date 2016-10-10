@@ -181,7 +181,7 @@ class AdultsAnatomy extends React.Component {
 			...this.state,
 			...{
 				bubbleVisible: false,
-				textId: false,
+				//textId: false,
 			}
 		})
 	}
