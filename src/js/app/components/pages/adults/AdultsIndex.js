@@ -22,6 +22,10 @@ class AdultsIndex extends React.Component {
 	componentWillMount(){
 		const { props } = this;
 
+		if (props.profile.roles.indexOf('EduStudent') > -1){
+			props.redirect('/forbidden');
+		}
+					
 	}
 
 	_setError(errorState){
@@ -96,7 +100,7 @@ class AdultsIndex extends React.Component {
 								color="red"
 								type="button"
 								onClickHandler={ (e) => {
-									props.goTo('/adults/anatomy');
+									props.goTo('/anatomy');
 								}}
 							>
 								Получить рекомендацию

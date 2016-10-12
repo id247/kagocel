@@ -151,6 +151,9 @@ class AdultsAnatomy extends React.Component {
 	componentWillMount(){
 		const { props } = this;
 
+		if (props.profile.roles.indexOf('EduStudent') > -1){
+			props.redirect('/forbidden');
+		}
 	}
 
 	_getAgeId(){

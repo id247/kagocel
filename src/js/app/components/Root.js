@@ -18,6 +18,7 @@ import KidsAnatomy		from '../components/pages/kids/KidsAnatomy';
 import Adults 			from '../components/pages/Adults';
 import AdultsIndex		from '../components/pages/adults/AdultsIndex';
 import AdultsAnatomy	from '../components/pages/adults/AdultsAnatomy';
+import AdultsForbidden	from '../components/pages/adults/AdultsForbidden';
 
 import Admins 			from '../components/pages/Admins';
 
@@ -27,23 +28,27 @@ import Quiz 			from '../components/pages-test/Quiz';
 
 let routes;
 
-if (location.href.indexOf('kagocel-2016-app') > -1 ){
+
+if (location.href.indexOf('kagocel-2016-app-parents') > -1 ){
 
 	routes = (
 		<Router history={hashHistory}>
 			<Route path="/" component={App}>
-				<IndexRoute component={AppIndex} />
-				<Route path="kids" component={Kids}>
-					<IndexRoute component={KidsIndex} />
-					<Route path="anatomy" component={KidsAnatomy} />
-				</Route>
-				
-				<Route path="adults" component={Adults}>
-					<IndexRoute component={AdultsIndex} />
-					<Route path="anatomy" component={AdultsAnatomy} />
-				</Route>
+				<IndexRoute component={AdultsIndex} />
+				<Route path="anatomy" component={AdultsAnatomy} />
+				<Route path="forbidden" component={AdultsForbidden} />
+			</Route>
+			<Route path="/login" component={Login} />
+		</Router>
+	);
 
-				<Route path="admins" component={Admins} />
+}else if (location.href.indexOf('kagocel-2016-app') > -1 ){
+
+	routes = (
+		<Router history={hashHistory}>
+			<Route path="/" component={App}>
+				<IndexRoute component={KidsIndex} />
+				<Route path="anatomy" component={KidsAnatomy} />
 			</Route>
 			<Route path="/login" component={Login} />
 		</Router>

@@ -40,7 +40,7 @@ class KidsIndex extends React.Component {
 							color="red"
 							type="button"
 							onClickHandler={ (e) => {
-								props.goTo('/kids/anatomy');
+								props.goTo('/anatomy');
 							}}
 						>
 							Начать

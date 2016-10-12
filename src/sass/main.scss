@@ -32,8 +32,27 @@
 		margin: auto;
 	}
 
+	&__section{
+		position: relative;
+	}
+
+	&__bgclick{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
 }
 
+/* ==========================================================================
+ * bgclick
+ * ========================================================================== */
+
+.bgclick{
+
+}
 
 /* ==========================================================================
  * section
@@ -49,6 +68,15 @@
 		@media (max-width: $maxWidth){
     		display: none;
 		}
+	}
+
+
+	&__bgclick{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 	}
 
 	&__wrap{
@@ -728,10 +756,20 @@
 
 .app{
 
+
+	&__bgclick{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
 	&__header{
 		padding: 15px;
 		margin: 0 auto 10px;
 		max-width: 1350px;
+		position: relative;
 		width: 100%;
 		@include clearfix;
 	}

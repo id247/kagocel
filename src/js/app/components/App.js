@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { PromoOptions } from 'appSettings';
+import BgClick from '../components/common/BgClick';
 
 import * as asyncActions from '../actions/async';
 
@@ -22,6 +23,8 @@ class App extends React.Component {
 		return(
 
 			<div className="app__page">
+
+				<BgClick mixClass="app__bgclick" />
 
 				<div className="app__header">
 
