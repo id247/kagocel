@@ -37,7 +37,7 @@ class AdultsIndex extends React.Component {
 
 		const { props, state } = this;
 
-		if (!Number.isInteger(age) || age < 1 || age > 18){
+		if (!Number.isInteger(age) || age < 3 || age > 18){
 			this._setError(true);
 			return false;
 		}
@@ -76,7 +76,7 @@ class AdultsIndex extends React.Component {
 					<div className="start__age start-age">
 
 						<div className="start-age__title">
-							{state.ageError ? 'Укажите корректный возраст в диапазоне от 1 до 18 лет:' : 'Укажите, сколько полных лет вашему ребенку:'}
+							{state.ageError ? 'Укажите корректный возраст в диапазоне от 3 до 18 лет:' : 'Укажите, сколько полных лет вашему ребенку:'}
 						</div>
 
 						<div className="start-age__item">

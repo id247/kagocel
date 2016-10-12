@@ -5,7 +5,6 @@ import { HTMLencode, HTMLdecode } from '../helpers/escape';
  
 import { CommentsOptions } from 'appSettings';
 
-
 import * as visual from '../helpers/visual.js';
 
 import * as loadingActions 		from '../actions/loading';
